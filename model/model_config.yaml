@@ -1,0 +1,36 @@
+##
+## Malaysia Energy System Model - Master Configuration
+## Calliope v0.6.x
+##
+## Three separate grids: Peninsular Malaysia, Sabah, Sarawak
+## Horizon: 2025-2050 (myopic, milestone years: 2025/2030/2035/2040/2045/2050)
+##
+
+import:
+  - 'techs/supply.yaml'
+  - 'techs/storage.yaml'
+  - 'techs/demand.yaml'
+  - 'techs/transmission.yaml'
+
+model:
+  name: Malaysia Energy System Model
+  calliope_version: 0.6.10
+  timeseries_data_path: 'timeseries'
+  # Subset of time: override per run with representative days CSV
+  subset_time: ['2025-01-01', '2025-12-31']
+
+run:
+  mode: plan
+  solver: appsi_highs
+  solver_options:
+    threads: 4
+    time_limit: 3600
+  backend: pyomo
+  objective_options:
+    cost_class: {'monetary': 1}
+    sense: minimize
+  zero_threshold: 1.0e-10
+
+techs: {}     # populated by imports above
+locations: {} # populated by region-specific YAML (peninsular/sabah/sarawak)
+links: {}     # populated by transmission.yaml

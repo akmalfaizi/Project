@@ -1,0 +1,30 @@
+##
+## NETR Target scenario
+## Aligned with Malaysia's National Energy Transition Roadmap:
+##   31% RE by 2025, 40% by 2035, 70% RE by 2050
+## - Coal phased out by 2040 (Peninsular) and 2045 (Sarawak)
+## - Carbon price trajectory: ~10 USD/tCO2 (2025) -> 50 USD/tCO2 (2050)
+## - Sabah-Sarawak HVDC enabled from 2035
+## - Accelerated solar deployment
+##
+
+overrides:
+
+  netr_target:
+    model.name: 'Malaysia NETR Target 2025-2050'
+
+    # Coal phase-out (enforced via energy_cap_max in myopic years)
+    locations.peninsular.techs.coal_new.constraints.energy_cap_max: 0
+    locations.sarawak.techs.coal_new.constraints.energy_cap_max: 0
+
+    # Accelerated solar ceiling
+    locations.peninsular.techs.solar_utility.constraints.energy_cap_max: 40000
+    locations.sarawak.techs.solar_utility.constraints.energy_cap_max: 15000
+    locations.sabah.techs.solar_utility.constraints.energy_cap_max: 5000
+
+    # Enable HVDC from 2035 (overridden in myopic_chain for years >= 2035)
+    # links.sabah,sarawak.techs.hvdc_sabah_sarawak.constraints.energy_cap_max: 1000
+
+    # RE group share constraints applied programmatically in build_model.py
+    # based on milestone year:
+    #   2025: 31%, 2030: 35%, 2035: 40%, 2040: 52%, 2045: 62%, 2050: 70%

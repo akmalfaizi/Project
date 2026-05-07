@@ -1,0 +1,12 @@
+calliope>=0.6.10
+highspy
+streamlit>=1.30
+plotly>=5.0
+xarray
+pandas
+scikit-learn
+pyyaml
+requests
+numpy
+netCDF4
+scipy

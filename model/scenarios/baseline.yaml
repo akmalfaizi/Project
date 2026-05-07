@@ -1,0 +1,27 @@
+##
+## Baseline scenario — Business as usual
+## - No new coal after 2030
+## - Coal retirement at end of economic life (30 years)
+## - Moderate RE growth driven by economics only
+## - No carbon price
+## - Sabah-Sarawak HVDC: available from 2035 (can invest if economic)
+##
+
+overrides:
+
+  baseline:
+    model.name: 'Malaysia Baseline 2025-2050'
+
+    # Demand growth: moderate
+    # Applied via demand scaling in build_model.py per milestone year
+
+    # No carbon price
+    # (carbon cost set to zero by default)
+
+    # Coal retirement schedule (applied in myopic_chain.py)
+    # peninsular: retire ~500 MW coal per 5-year period post-2030
+    # sarawak: retire coal by 2040
+
+    # No new coal
+    locations.peninsular.techs.coal_new.constraints.energy_cap_max: 0
+    locations.sarawak.techs.coal_new.constraints.energy_cap_max: 0

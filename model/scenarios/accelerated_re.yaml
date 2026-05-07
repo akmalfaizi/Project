@@ -1,0 +1,27 @@
+##
+## Accelerated RE scenario
+## - Coal phase-out by 2035 (all regions)
+## - 80%+ RE by 2050
+## - Aggressive solar + storage expansion
+## - High carbon price: 50 USD/tCO2 (2025) -> 150 USD/tCO2 (2050)
+## - HVDC enabled from 2030
+##
+
+overrides:
+
+  accelerated_re:
+    model.name: 'Malaysia Accelerated RE 2025-2050'
+
+    # No new coal anywhere
+    locations.peninsular.techs.coal_new.constraints.energy_cap_max: 0
+    locations.sarawak.techs.coal_new.constraints.energy_cap_max: 0
+
+    # Expanded solar ceilings
+    locations.peninsular.techs.solar_utility.constraints.energy_cap_max: 60000
+    locations.sarawak.techs.solar_utility.constraints.energy_cap_max: 20000
+    locations.sabah.techs.solar_utility.constraints.energy_cap_max: 8000
+
+    # Large battery deployment
+    locations.peninsular.techs.battery_storage.constraints.energy_cap_max: 20000
+    locations.sarawak.techs.battery_storage.constraints.energy_cap_max: 10000
+    locations.sabah.techs.battery_storage.constraints.energy_cap_max: 3000
