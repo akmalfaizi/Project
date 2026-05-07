@@ -1,0 +1,46 @@
+##
+## Sarawak — Location definitions
+## Grid operator: Sarawak Energy Berhad (SEB)
+##
+
+locations:
+
+  sarawak:
+    coordinates: {lat: 2.5, lon: 113.0}
+    techs:
+      demand_electricity: {}
+      hydro_large_existing:
+        constraints:
+          energy_cap_max: 3452
+          energy_cap_min: 3452
+      hydro_ror:
+        constraints:
+          energy_cap_min: 1285
+          energy_cap_max: 6000
+      gas_ccgt:
+        constraints:
+          energy_cap_min: 1200
+          energy_cap_max: 4000
+      coal_existing:
+        constraints:
+          energy_cap_max: 920
+          energy_cap_min: 920
+      coal_new:
+        constraints:
+          energy_cap_max: 0
+      solar_utility:
+        constraints:
+          energy_cap_max: 10000
+      solar_rooftop:
+        constraints:
+          energy_cap_max: 1000
+      diesel_genset:
+        constraints:
+          energy_cap_min: 100
+          energy_cap_max: 100
+      battery_storage:
+        constraints:
+          energy_cap_max: 5000
+      wind_onshore:
+        constraints:
+          energy_cap_max: 0

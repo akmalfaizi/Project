@@ -1,0 +1,205 @@
+##
+## Supply technology definitions
+## All costs in USD (2023 real terms)
+##
+
+techs:
+
+  coal_existing:
+    essentials:
+      name: 'Coal power plant (existing)'
+      color: '#3d3d3d'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 0.38
+      lifetime: 30
+      energy_ramping: 0.15
+    costs:
+      monetary:
+        interest_rate: 0.08
+        energy_cap: 0
+        om_con: 43
+        om_annual: 30000
+
+  coal_new:
+    essentials:
+      name: 'Coal power plant (new build)'
+      color: '#555555'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 0.42
+      lifetime: 30
+      energy_ramping: 0.15
+      energy_cap_max: 0
+    costs:
+      monetary:
+        interest_rate: 0.08
+        energy_cap: 1800000
+        om_con: 38
+        om_annual: 35000
+
+  gas_ccgt:
+    essentials:
+      name: 'Gas combined cycle (CCGT)'
+      color: '#d4a017'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 0.52
+      lifetime: 25
+      energy_ramping: 0.9
+    costs:
+      monetary:
+        interest_rate: 0.08
+        energy_cap: 900000
+        om_con: 72
+        om_annual: 25000
+
+  gas_ocgt:
+    essentials:
+      name: 'Gas open cycle peaker (OCGT)'
+      color: '#e8c547'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 0.35
+      lifetime: 20
+      energy_ramping: 1.0
+    costs:
+      monetary:
+        interest_rate: 0.08
+        energy_cap: 550000
+        om_con: 124
+        om_annual: 18000
+
+  diesel_genset:
+    essentials:
+      name: 'Diesel generator (emergency/remote)'
+      color: '#a05000'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 0.30
+      lifetime: 15
+      energy_ramping: 1.0
+      energy_cap_max: 0
+    costs:
+      monetary:
+        interest_rate: 0.08
+        energy_cap: 400000
+        om_con: 280
+        om_annual: 15000
+
+  hydro_large_existing:
+    essentials:
+      name: 'Large hydropower (existing dams)'
+      color: '#1a6bb5'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 1.0
+      resource: file=hydro_cf.csv
+      resource_unit: energy_per_cap
+      lifetime: 60
+      force_resource: False
+    costs:
+      monetary:
+        interest_rate: 0.05
+        energy_cap: 0
+        om_annual: 15000
+
+  hydro_ror:
+    essentials:
+      name: 'Run-of-river hydropower (new)'
+      color: '#2a9bd4'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 1.0
+      resource: file=hydro_cf.csv
+      resource_unit: energy_per_cap
+      lifetime: 40
+      force_resource: False
+      energy_cap_max: 0
+    costs:
+      monetary:
+        interest_rate: 0.06
+        energy_cap: 2500000
+        om_annual: 30000
+
+  solar_utility:
+    essentials:
+      name: 'Utility-scale solar PV'
+      color: '#f5c518'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 1.0
+      resource: file=solar_cf.csv
+      resource_unit: energy_per_cap
+      force_resource: True
+      lifetime: 25
+      energy_cap_max: inf
+    costs:
+      monetary:
+        interest_rate: 0.07
+        energy_cap: 650000
+        om_annual: 8000
+
+  solar_rooftop:
+    essentials:
+      name: 'Rooftop solar PV (NEM)'
+      color: '#ffd700'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 1.0
+      resource: file=solar_cf.csv
+      resource_unit: energy_per_cap
+      force_resource: True
+      lifetime: 25
+      energy_cap_max: 0
+    costs:
+      monetary:
+        interest_rate: 0.07
+        energy_cap: 900000
+        om_annual: 10000
+
+  wind_onshore:
+    essentials:
+      name: 'Onshore wind'
+      color: '#8bc34a'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 1.0
+      resource: file=wind_cf.csv
+      resource_unit: energy_per_cap
+      force_resource: True
+      lifetime: 25
+      energy_cap_max: 0
+    costs:
+      monetary:
+        interest_rate: 0.07
+        energy_cap: 1300000
+        om_annual: 30000
+
+  biomass_plant:
+    essentials:
+      name: 'Biomass power plant'
+      color: '#4caf50'
+      parent: supply
+      carrier_out: electricity
+    constraints:
+      energy_eff: 0.28
+      lifetime: 20
+      energy_ramping: 0.5
+      energy_cap_max: 0
+    costs:
+      monetary:
+        interest_rate: 0.07
+        energy_cap: 3500000
+        om_con: 0.005
+        om_annual: 80000

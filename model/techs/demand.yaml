@@ -1,0 +1,16 @@
+##
+## Demand technology definitions
+##
+
+techs:
+
+  demand_electricity:
+    essentials:
+      name: 'Electricity demand'
+      color: '#e91e63'
+      parent: demand
+      carrier_in: electricity
+    constraints:
+      resource: file=demand.csv
+      resource_unit: energy
+      force_resource: True

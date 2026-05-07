@@ -1,0 +1,22 @@
+import:
+- techs/supply.yaml
+- techs/storage.yaml
+- techs/demand.yaml
+- techs/transmission.yaml
+- locations/sabah.yaml
+model:
+  name: Malaysia Sabah 2045 (netr_target)
+  calliope_version: 0.6.10
+  timeseries_data_path: timeseries/sabah
+  subset_time:
+  - '2025-01-01 00:00:00'
+  - '2025-01-24 23:00:00'
+run:
+  mode: plan
+  solver: appsi_highs
+  solver_options: {}
+  backend: pyomo
+  objective_options:
+    cost_class:
+      monetary: 1
+    sense: minimize

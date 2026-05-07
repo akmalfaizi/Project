@@ -1,0 +1,48 @@
+##
+## Peninsular Malaysia — Location definitions
+## Grid operator: TNB
+##
+
+locations:
+
+  peninsular:
+    coordinates: {lat: 3.8, lon: 109.5}
+    available_area: 1.0e6
+    techs:
+      demand_electricity: {}
+      coal_existing:
+        constraints:
+          energy_cap_max: 12800
+          energy_cap_min: 12800
+      gas_ccgt:
+        constraints:
+          energy_cap_min: 10980
+      gas_ocgt:
+        constraints:
+          energy_cap_min: 1000
+          energy_cap_max: 5000
+      hydro_large_existing:
+        constraints:
+          energy_cap_max: 1300
+          energy_cap_min: 1300
+      hydro_ror:
+        constraints:
+          energy_cap_max: 1000
+      solar_utility:
+        constraints:
+          energy_cap_max: 40000
+      solar_rooftop:
+        constraints:
+          energy_cap_max: 5000
+      wind_onshore:
+        constraints:
+          energy_cap_max: 500
+      biomass_plant:
+        constraints:
+          energy_cap_max: 2000
+      coal_new:
+        constraints:
+          energy_cap_max: 0
+      battery_storage:
+        constraints:
+          energy_cap_max: 10000

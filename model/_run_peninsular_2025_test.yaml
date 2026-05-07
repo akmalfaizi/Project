@@ -1,0 +1,22 @@
+import:
+- techs/supply.yaml
+- techs/storage.yaml
+- techs/demand.yaml
+- techs/transmission.yaml
+- locations/peninsular.yaml
+model:
+  calliope_version: 0.6.10
+  name: Test
+  subset_time:
+  - '2025-01-01 00:00:00'
+  - '2025-01-01 23:00:00'
+  timeseries_data_path: timeseries/peninsular
+run:
+  backend: pyomo
+  mode: plan
+  objective_options:
+    cost_class:
+      monetary: 1
+    sense: minimize
+  solver: appsi_highs
+  solver_options: {}

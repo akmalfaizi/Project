@@ -1,0 +1,26 @@
+{
+  "peninsular": {
+    "2025": {"solar_rooftop": 1050.0, "gas_ocgt": 1000.0, "solar_utility": 7000.0, "gas_ccgt": 10980.0, "hydro_large_existing": 1300.0, "hydro_ror": 1000.0, "biomass_plant": 2000.0, "coal_existing": 12800.0, "demand_electricity": 20208.172095387443},
+    "2030": {"solar_rooftop": 2250.0, "hydro_large_existing": 1300.0, "hydro_ror": 1000.0, "demand_electricity": 24000.96925984697, "solar_utility": 15000.0, "gas_ocgt": 1000.0, "biomass_plant": 2000.0, "gas_ccgt": 10980.0, "coal_existing": 10000.0, "battery_storage": 6468.562167089491},
+    "2035": {"coal_existing": 7000.0, "biomass_plant": 2000.0, "hydro_ror": 1000.0, "battery_storage": 10000.0, "gas_ccgt": 10980.0, "demand_electricity": 28505.62251217185, "gas_ocgt": 1000.0, "hydro_large_existing": 1300.0, "solar_rooftop": 2741.334277128727, "solar_utility": 22000.0},
+    "2040": {"coal_existing": 3000.0, "gas_ccgt": 16793.065610661673, "hydro_ror": 1000.0, "battery_storage": 10000.0, "gas_ocgt": 1000.0, "solar_utility": 26200.632319106375, "biomass_plant": 2000.0, "demand_electricity": 33855.73749164576, "solar_rooftop": 2741.334277128727, "hydro_large_existing": 1300.0},
+    "2045": {"hydro_ror": 1000.0, "solar_rooftop": 2741.334277128727, "demand_electricity": 40209.99578640314, "biomass_plant": 2000.0, "gas_ccgt": 26143.755652130476, "hydro_large_existing": 1300.0, "battery_storage": 10000.0, "solar_utility": 30598.038277297626, "gas_ocgt": 1000.0},
+    "2050": {"hydro_large_existing": 1300.0, "gas_ccgt": 32887.8972261694, "solar_utility": 35776.781571672895, "demand_electricity": 47756.861345629535, "biomass_plant": 2000.0, "hydro_ror": 1000.0, "solar_rooftop": 2741.334277128727, "battery_storage": 10000.0, "gas_ocgt": 1798.486019621574}
+  },
+  "sabah": {
+    "2025": {"battery_storage": 703.9274302237246, "diesel_genset": 150.0, "biomass_plant": 300.0, "gas_ocgt": 300.0, "demand_electricity": 1262.20785767069, "solar_utility": 800.0, "gas_ccgt": 900.0, "hydro_ror": 500.0, "hydro_large_existing": 140.0},
+    "2030": {"gas_ocgt": 300.0, "demand_electricity": 1572.9406337930598, "hydro_large_existing": 140.0, "battery_storage": 1419.3950807863816, "diesel_genset": 150.0, "biomass_plant": 300.0, "hydro_ror": 500.0, "gas_ccgt": 900.0, "solar_utility": 1430.3682967103298},
+    "2035": {"solar_utility": 1767.0830641313223, "gas_ccgt": 900.0, "battery_storage": 1500.0, "hydro_ror": 500.0, "biomass_plant": 300.0, "gas_ocgt": 300.0, "hydro_large_existing": 140.0, "demand_electricity": 1960.1702068335687, "diesel_genset": 150.0, "wind_onshore": 300.0},
+    "2040": {"solar_utility": 2201.282081665049, "hydro_ror": 500.0, "diesel_genset": 150.0, "battery_storage": 1500.0, "wind_onshore": 300.0, "gas_ccgt": 900.0, "biomass_plant": 300.0, "hydro_large_existing": 140.0, "demand_electricity": 2442.728706481783, "gas_ocgt": 300.0},
+    "2045": {"battery_storage": 1500.0, "demand_electricity": 3044.084392604379, "hydro_large_existing": 140.0, "gas_ccgt": 1143.7891653172694, "diesel_genset": 150.0, "biomass_plant": 300.0, "solar_utility": 2720.972343940828, "wind_onshore": 300.0, "gas_ocgt": 300.0, "hydro_ror": 500.0},
+    "2050": {"gas_ocgt": 300.0, "demand_electricity": 3793.48298675536, "hydro_ror": 500.0, "gas_ccgt": 1749.248094064836, "solar_rooftop": 339.34532757797626, "solar_utility": 3000.0, "biomass_plant": 300.0, "diesel_genset": 150.0, "wind_onshore": 300.0, "hydro_large_existing": 140.0, "battery_storage": 1500.0}
+  },
+  "sarawak": {
+    "2025": {"hydro_large_existing": 3452.0, "demand_electricity": 3356.9730556610966, "gas_ccgt": 1200.0, "diesel_genset": 100.0, "hydro_ror": 1285.0, "battery_storage": 132.93557180754624, "coal_existing": 920.0},
+    "2030": {"battery_storage": 352.8053572166394, "demand_electricity": 4084.2710114486704, "hydro_ror": 1285.0, "solar_utility": 639.5394084763929, "diesel_genset": 100.0, "gas_ccgt": 1200.0, "hydro_large_existing": 3452.0},
+    "2035": {"battery_storage": 937.2562331485874, "hydro_ror": 1635.5069451831534, "hydro_large_existing": 3452.0, "coal_existing": 86.2693019457538, "solar_utility": 1568.7928087268117, "diesel_genset": 100.0, "gas_ccgt": 1200.0, "demand_electricity": 4969.140180267209},
+    "2040": {"hydro_large_existing": 3452.0, "diesel_genset": 100.0, "battery_storage": 1552.5030604861777, "gas_ccgt": 1200.0, "demand_electricity": 6045.71882275456, "solar_utility": 2081.959613601219, "hydro_ror": 2634.040156547481},
+    "2045": {"demand_electricity": 7355.541352798648, "hydro_large_existing": 3452.0, "solar_utility": 2793.017740449648, "battery_storage": 2236.601269956628, "gas_ccgt": 1200.0, "diesel_genset": 100.0, "hydro_ror": 3789.394793120154},
+    "2050": {"hydro_ror": 5358.263992473883, "battery_storage": 3058.691212883238, "hydro_large_existing": 3452.0, "gas_ccgt": 1200.0, "solar_utility": 3511.050178438668, "demand_electricity": 8949.140735605699, "diesel_genset": 100.0}
+  }
+}

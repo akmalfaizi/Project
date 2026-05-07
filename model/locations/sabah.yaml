@@ -1,0 +1,58 @@
+##
+## Sabah — Location definitions
+## Grid operator: SESB
+##
+
+locations:
+
+  sabah:
+    coordinates: {lat: 5.9, lon: 116.1}
+    techs:
+      demand_electricity: {}
+      gas_ccgt:
+        constraints:
+          energy_cap_min: 900
+          energy_cap_max: 3000
+      gas_ocgt:
+        constraints:
+          energy_cap_min: 300
+          energy_cap_max: 1000
+      diesel_genset:
+        constraints:
+          energy_cap_min: 150
+          energy_cap_max: 150
+      hydro_large_existing:
+        constraints:
+          energy_cap_max: 140
+          energy_cap_min: 140
+      hydro_ror:
+        constraints:
+          energy_cap_max: 500
+      solar_utility:
+        constraints:
+          energy_cap_max: 3000
+      solar_rooftop:
+        constraints:
+          energy_cap_max: 500
+      wind_onshore:
+        constraints:
+          energy_cap_max: 300
+      biomass_plant:
+        constraints:
+          energy_cap_max: 300
+      coal_existing:
+        constraints:
+          energy_cap_max: 0
+      coal_new:
+        constraints:
+          energy_cap_max: 0
+      battery_storage:
+        constraints:
+          energy_cap_max: 1500
+
+links:
+  sabah,sarawak:
+    techs:
+      hvdc_sabah_sarawak:
+        constraints:
+          energy_cap_max: 0

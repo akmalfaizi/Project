@@ -1,0 +1,36 @@
+##
+## Transmission technology definitions
+##
+
+techs:
+
+  free_transmission:
+    essentials:
+      name: 'Intra-region transmission (copper plate)'
+      color: '#607d8b'
+      parent: transmission
+      carrier: electricity
+    constraints:
+      energy_eff: 1.0
+      energy_cap_max: inf
+    costs:
+      monetary:
+        interest_rate: 0.07
+        energy_cap: 0
+        om_annual: 0
+
+  hvdc_sabah_sarawak:
+    essentials:
+      name: 'Sabah-Sarawak HVDC interconnector'
+      color: '#ff5722'
+      parent: transmission
+      carrier: electricity
+    constraints:
+      energy_eff: 0.97
+      energy_cap_max: 1000
+      lifetime: 40
+    costs:
+      monetary:
+        interest_rate: 0.07
+        energy_cap: 1500000
+        om_annual: 20000
